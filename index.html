@@ -1,7 +1,6 @@
 
 
 
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -19,10 +18,20 @@
     <body>
 
 
-<a class="twitter-timeline" data-dnt=true href="https://twitter.com/USAgov/va" data-widget-id="288431875452715008">Tweets from @USAgov/va</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<h2>Agency Developer pages</h2>
+<ul id="pages"> </ul>
 
 
+#URL to the dataset, proxied for JSONP
+url = "http://jsonp.jit.su/?url=https://raw.github.com/GSA/slash-developer-pages/master/slash-developer-pages.json&callback=?"
+
+#template to use to format data
+template = '<li><a href="<%= developer_url %>"><%= name %></a></li>'
+
+#get data and format
+$.getJSON url, (data) ->
+    _.each data.agencies.agency, (agency) ->
+		$("#pages").append _.template template, agency
 
 
     </body>
