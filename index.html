@@ -41,7 +41,7 @@
                     $.get(url, function (data) {
                         for (var i = 0; i < data.accounts.length; i += 1) {
                             var account = data.accounts[i]
-                        $("#" + account.service_id).append('<li><a href="' + account.details_url +'">' + account.account + '</a></li><br>')
+                        $("#" + account.service_id).append('<li><a href="' + account.details_url +'">' + account.account + '</a></li>')
                         }
                     });
                 }
