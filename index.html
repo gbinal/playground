@@ -31,12 +31,31 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <ul>
-<li>[ ] A</li>
-<li>[ ] B</li>
-<li>[ ] C</li>
-</ul>
-      </section>
+
+        <div id="content">
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var services = ['Facebook', 'Twitter']
+                for (var j = 0; j < services.length; j += 1) {
+                    var service = services[j];
+                    $("#content").append("<h2>" + service + "</h2><ul id=\"" + service.toLowerCase() + "\"></ul>");
+                    var url = "http://registry.usa.gov/accounts.json?service_id=" + service.toLowerCase() +"&agency_id=usda";
+                    $.get(url, function (data) {
+                        for (var i = 0; i < data.accounts.length; i += 1) {
+                            var account = data.accounts[i]
+                        $("#" + account.service_id).append('<a href="' + account.details_url +'">' + account.account + '</a><br>')
+                        }
+                    });
+                }
+            });
+        </script>
+  
+  
+  
+  
+</section>
     </div>
 
     <!-- FOOTER  -->
