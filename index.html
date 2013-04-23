@@ -18,13 +18,9 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/gbinal/playground">View on GitHub</a>
 
-          <h1 id="project_title">Playground</h1>
+          <h1 id="project_title">Code Playground</h1>
           <h2 id="project_tagline">bits and pieces</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/gbinal/playground/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/gbinal/playground/tarball/master">Download this project as a tar.gz file</a>
-            </section>
         </header>
     </div>
 
@@ -41,7 +37,7 @@
                 for (var j = 0; j < services.length; j += 1) {
                     var service = services[j];
                     $("#content").append("<h2>" + service + "</h2><ul id=\"" + service.toLowerCase() + "\"></ul>");
-                    var url = "http://registry.usa.gov/accounts.json?service_id=" + service.toLowerCase() +"&agency_id=usda";
+                    var url = "http://registry.usa.gov/accounts.json?service_id=" + service.toLowerCase() +"&agency_id=epa";
                     $.get(url, function (data) {
                         for (var i = 0; i < data.accounts.length; i += 1) {
                             var account = data.accounts[i]
