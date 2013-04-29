@@ -57,7 +57,75 @@ Note the need to personalize which services to include (row 6) and the agency_id
             });
         </script>
   
+  <h2>Test table</h2>
   
+  <table cellspacing="0" cellpadding="2">
+<tr>
+<th id="id_33616">Parameter</th>
+<th style=" width: 80px;">Type</th>
+<th id="id_33618">Description</th>
+<th id="id_33619">Sample Values</th>
+</tr>
+
+<tr class="odd">
+<td headers="id_33616"><strong>fiscalyear</strong></td>
+<td style=" width: 80px;">Four digit year</td>
+<td headers="id_33618">Four digit year. Rates are set for each fiscal year beginning October 1st and end September 30th of the following year.</td>
+<td headers="id_33619">2012 and 2013<br />
+(These are the only years included in the API)</td>
+</tr>
+
+<tr class="even">
+<td headers="id_33616"><strong>zip</strong></td>
+<td style=" width: 80px;">Five digit string</td>
+<td headers="id_33618">Five digit postal ZIP code within the continental United States (including the District of Columbia)</td>
+<td headers="id_33619">20405, &#160;10036</td>
+</tr>
+
+<tr class="odd">
+<td headers="id_33616"><strong>state</strong></td>
+<td style=" width: 80px;">Two letter string</td>
+<td headers="id_33618">Two letter postal abbreviation for state</td>
+<td headers="id_33619">NY, DC</td>
+</tr>
+
+<tr class="even">
+<td headers="id_33616"><strong>destinationid</strong></td>
+<td style=" width: 80px;">Up to three digit integer</td>
+<td headers="id_33618">Number used to identify a "primary destination." &#160;This is an area for which GSA has specified a Per Diem Rate (other than the standard rate.) When the standard rate applies to a ZIP code, then DestinationID=0</td>
+<td headers="id_33619">0, 475</td>
+</tr>
+
+<tr class="odd">
+<td headers="id_33616"><strong>city</strong></td>
+<td style=" width: 80px;">Text string</td>
+<td headers="id_33618">Most prominent city or cities in a primary destination. When the standard rate applies, city ="Standard Rate"</td>
+<td headers="id_33619">"Riverhead / Ronkonkoma / Melville," &#160;"District of Columbia," "Standard Rate"</td>
+</tr>
+
+<tr class="even">
+<td headers="id_33616"><strong>county</strong></td>
+<td style=" width: 80px;">Text string</td>
+<td headers="id_33618">County in which City is located. &#160;When the standard rate applies, county is empty.</td>
+<td headers="id_33619">"Suffolk," "Bronx, Kings, New York, Queens, Richmond"</td>
+</tr>
+
+<tr class="odd">
+<td headers="id_33616"><strong>oct, nov, dec, jan, feb, mar, apr, may, jun, aug, sep</strong></td>
+<td style=" width: 80px;">Three letter string</td>
+<td headers="id_33618">Month for which hotel reimbursement rate is given. Per Diem values for each month are two or three digit integers representing hotel reimbursement rate in whole dollars and zero cents.</td>
+<td headers="id_33619">Oct, Nov, Dec, Jan, Feb, Mar, Apr, May, Jun, Aug, Sep</td>
+</tr>
+
+<tr class="even">
+<td headers="id_33616"><strong>meals</strong></td>
+<td style=" width: 80px;">String</td>
+<td headers="id_33618">Value represents daily total meal reimbursement allow for entire fiscal year and is a two digit integer representing whole dollars and zero cents.</td>
+<td headers="id_33619">46, 61</td>
+</tr>
+</table>
+
+
   
   
 </section>
