@@ -30,33 +30,17 @@
 
 
 <h2>rss embed experiment</h2>
-<table id="feed" class="table table-striped"></table>
-<script type="text/javascript">
-var feed_url = 'http://www.digitalgov.gov/events/feed/';
- 
-jQuery.ajax({
-    type: "GET",
-    url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=1000&callback=?&q=' + encodeURIComponent(feed_url),
-    dataType: 'json',
-    success: function(data){
-        values = data.responseData.feed.entries;
-        var list = '', count = 0;
- 
-        jQuery.each(values, function(index, item) {
-        	var date = item.publishedDate.split(' ');
-            date.pop();
-            date = date.join(' ');
- 
-        	if (count >= 5) return;
-        	list += "<tr><td><a href='" + item.link + "'>" + item.title + "</a> <br/><span class=''>" + date + "</span> </td></tr>";
-        	count ++;
-        });
- 
-        jQuery('#feed').html(list);
-    }
-});
-</script>
 
+
+
+
+<script src="http://feeds.feedburner.com/DigitalgovUpcomingEvents?format=sigpro" type="text/javascript" ></script><noscript></noscript> </noscript>
+
+<p>
+<code>
+<script src="http://feeds.feedburner.com/DigitalgovUpcomingEvents?format=sigpro" type="text/javascript" ></script><noscript></noscript> </noscript>
+</code>
+</p>
 
 <h2>Code to Embed</h2>
 <script src="https://gist.github.com/gbinal/5445448.js"></script>
