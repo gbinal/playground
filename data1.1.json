@@ -1,19 +1,4 @@
-{
-    "conformsTo": "https://project-open-data.cio.gov/v1.1/schema", 
-    "describedBy": "https://project-open-data.cio.gov/v1.1/schema/catalog.json",
-    "dataset": [
-        {
-            "accessLevel": "public", 
-            "accrualPeriodicity": "R/P1Y", 
-            "bureauCode": [
-                "018:10"
-            ],
-            "conformsTo": "http://www.agency.gov/widget-taxonomy/",
-            "contactPoint": {
-                "fn": "Jane Doe", 
-                "hasEmail": "mailto:jane.doe@agency.gov"
-            }, 
-            "describedBy": "http://www.agency.gov/datasets/widgets-dictionary.html", 
+ncy.gov/datasets/widgets-dictionary.html", 
             "dataQuality": true, 
             "description": "This dataset provides national statistics on the production of widgets", 
             "distribution": [
